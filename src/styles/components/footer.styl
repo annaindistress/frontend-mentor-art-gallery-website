@@ -1,0 +1,59 @@
+.footer
+    padding 48px 32px
+    color color-white
+    background-color color-black
+
+    &--inner
+        color color-black
+        background-color color-gold
+
+    &__container
+        display flex
+        flex-wrap nowrap
+        flex-direction column
+
+    &__link
+        width 111px
+        height 40px
+        margin-bottom 38px
+
+    &__logo
+        display block
+        width 100%
+        height auto
+
+    &__about
+        margin 0 0 38px
+        font-size 16px
+        line-height 1.62
+        color inherit
+
+@media (min-width: 768px)
+    .footer
+        padding-top 56px
+        padding-bottom 56px
+
+        &__container
+            flex-direction row
+
+        &__link
+            margin-right 64px
+            margin-bottom 0
+
+        &__about
+            max-width 280px
+            margin-right auto
+            margin-bottom 0
+
+@media (min-width: 1200px)
+    .footer
+        padding-top 80px
+        padding-bottom 80px
+
+        &__link
+            margin-right 140px
+
+        &__about
+            max-width 430px
+            font-size 18px
+            line-height 1.56
