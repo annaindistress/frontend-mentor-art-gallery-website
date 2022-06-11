@@ -1,0 +1,104 @@
+.about
+    margin-bottom 120px
+    padding 0 16px
+
+    &__container
+        display grid
+        gap 16px
+
+    &__header
+        display grid
+        gap 25px
+
+    &__header-container
+        order 1
+
+    &__text-container
+        order 1
+        padding 48px 24px
+        color color-white
+        background-color color-black
+
+    &__title
+        margin 0 0 24px
+        font-family font-title
+        font-weight 900
+        font-size 50px
+        line-height .9
+        text-transform uppercase
+
+        &--dark
+            color color-black
+
+    &__text
+        margin 0
+
+    &__image
+        img
+            display block
+            width 100%
+            height auto
+
+@media (min-width: 768px)
+    .about
+        &__container
+            grid-template-areas "header header" "large-image small-image" "large-image text"
+            gap 11px
+
+        &__header
+            grid-area header
+            grid-template-columns 223px 398px
+            gap 68px
+
+        &__header-container
+            order -1
+            padding-top 36px
+
+        &__text-container
+            grid-area text
+            padding 85px 28px
+
+        &__image
+            &--header
+                width 100%
+
+            &--small
+                grid-area small-image
+                width 280px
+
+            &--large
+                grid-area large-image
+                width 398px
+
+@media (min-width: 1200px)
+    .about
+        margin-bottom 180px
+
+        &__container
+            gap 30px
+
+        &__header
+            grid-template-columns 350px 635px
+            gap 125px
+
+        &__header-container
+            padding-top 60px
+
+        &__text-container
+            padding 65px 48px
+
+        &__title
+            margin-bottom 32px
+            font-size 60px
+            line-height 1
+
+        &__text
+            font-size 22px
+            line-height 1.45
+
+        &__image
+            &--small
+                width 445px
+
+            &--large
+                width 635px
