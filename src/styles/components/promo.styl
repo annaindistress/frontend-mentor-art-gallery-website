@@ -1,0 +1,80 @@
+.promo
+    display grid
+    gap 32px
+    margin-bottom 120px
+
+    &__title
+        margin 0 16px
+        font-family font-title
+        font-weight 900
+        font-size 60px
+        line-height .92
+        text-transform uppercase
+        color color-black
+
+    &__container
+        margin 0 16px
+
+    &__text
+        margin 0 0 32px
+
+    &__image
+        order -1
+
+        img
+            display block
+            width 100%
+            height auto
+
+@media (min-width: 768px)
+    .promo
+        grid-template-areas "image title" "image text"
+        grid-template-columns calc(50% + 5px) 1fr
+        gap 0
+
+        &__title
+            grid-area title
+            align-self end
+            margin 0 0 48px
+            font-size 70px
+            letter-spacing 0
+
+        &__container
+            grid-area text
+            margin 0
+            margin-right 40px
+
+        &__text
+            margin-bottom 48px
+
+        &__image
+            grid-area image
+            margin-right -48px
+
+@media (min-width: 1200px)
+    .promo
+        grid-template-areas "title image text"
+        grid-template-columns 450px 540px 350px
+        justify-content center
+        background-image linear-gradient(to right, color-black 0, color-black 50%, color-white 0)
+
+        &__title
+            position relative
+            right -185px
+            align-self start
+            margin-bottom 0
+            padding-top 190px
+            font-size 90px
+            color color-white
+            mix-blend-mode exclusion
+
+        &__container
+            position relative
+            left -65px
+            margin-right 0
+            padding-top 190px
+            font-size 22px
+            line-height 1.45
+
+        &__image
+            margin-right 0
