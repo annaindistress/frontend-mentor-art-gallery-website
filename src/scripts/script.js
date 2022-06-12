@@ -12,7 +12,7 @@ L.tileLayer.grayscale('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const locationIcon = L.icon({
-    iconUrl: '../images/icon-location.svg',
+    iconUrl: './images/icon-location.svg',
     iconSize: [66, 88],
     iconAnchor: [33, 88]
 });
