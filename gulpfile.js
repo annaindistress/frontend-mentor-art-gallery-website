@@ -20,6 +20,7 @@ gulp.task('copy', function () {
         .src([
             'src/*.html',
             'src/fonts/**/*',
+            'src/scripts/**/*',
             'src/images/**/*',
             '!src/images/sprite',
             '!src/images/sprite/**/*',
@@ -112,6 +113,7 @@ gulp.task('watch', function() {
     gulp.watch([
         'src/*.html',
         'src/fonts/**/*',
+        'src/scripts/**/*',
         'src/images/!(sprite)/*',
         'src/images/*',
     ], gulp.series('copy'));

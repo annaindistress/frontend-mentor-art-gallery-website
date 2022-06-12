@@ -1,0 +1,101 @@
+.contacts
+    display flex
+    flex-wrap nowrap
+    flex-direction column-reverse
+    flex-grow 1
+    color color-white
+    background-color color-black
+
+    &__container
+        width 100%
+        padding 48px 16px 56px
+
+    &__title
+        margin 0 0 48px
+        font-family font-title
+        font-weight 900
+        font-size 50px
+        line-height .9
+        text-transform uppercase
+
+    &__address
+        margin 0 0 20px
+        font-family font-title
+        font-weight 900
+        font-size 32px
+        line-height 1
+        text-transform uppercase
+        color color-gold
+
+    &__text
+        margin 0 0 20px
+
+        &:last-of-type
+            margin-bottom 0
+
+    &__map
+        position relative
+        min-height 550px
+        background-image url('../images/mobile/image-map@2x.png')
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+
+        #map
+            position absolute
+            top 0
+            left 0
+            right 0
+            bottom 0
+
+    &__btn-container
+        position relative
+        z-index 999
+
+@media (min-width: 768px)
+    .contacts
+        &__container
+            display flex
+            flex-wrap nowrap
+            justify-content space-between
+            padding 88px 0 80px
+
+        &__title
+            width 220px
+            margin-bottom 0
+
+        &__text-container
+            width 400px
+
+        &__map
+            min-height 600px
+            background-image url('../images/tablet/image-map@2x.png')
+
+@media (min-width: 1200px)
+    .contacts
+        &__container
+            padding-top 104px
+            padding-bottom 128px
+
+        &__title
+            width 350px
+            font-size 70px
+            line-height 1
+
+        &__text-container
+            width 540px
+
+        &__address
+            margin-bottom 24px
+            font-size 36px
+
+        &__text
+            margin-bottom 32px
+            font-size 22px
+            line-height 1.45
+
+            &:last-of-type
+                margin-bottom 0
+
+        &__map
+            background-image url('../images/desktop/image-map@2x.png')
